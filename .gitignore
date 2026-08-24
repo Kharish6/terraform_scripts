@@ -1,0 +1,4 @@
+#ignore these files from commiting
+*.tfstate
+*.tfstate.backup
+*.terraform
