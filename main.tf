@@ -1,17 +1,16 @@
 #default provider configuration
 provider "aws" {
-  region = "ap-south-1"
+  region = var.aws_region
 }
 
 
 resource "aws_instance" "linuxAMI" {
-  ami           = "ami-035827357e3c7e0" 
-  instance_type = "t3.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  availability_zone = var.availability_zone
+  subnet_id = var.subnet
   tags = {
-    Name = "linux-amiInstance"
+    Name = "${var.environment}"
   }
 }
 
-output "Instance_names" {
-  value = [aws_instance.linuxAMI.tags["Name"]]
-}
