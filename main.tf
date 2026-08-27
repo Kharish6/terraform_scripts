@@ -7,7 +7,7 @@ terraform {
   backend "s3" {
     bucket = "tfstate-983401047700-ap-south-1-an"
     key    = "dev.tfstate"
-    region = var.aws_region
+    region = "ap-south-1"
   }
 }
 
