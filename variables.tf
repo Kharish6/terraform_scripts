@@ -17,12 +17,12 @@ variable "environment" {
   type = string
 }
 
-variable "availability_zone"{
-    type = string
-    default = "ap-south-1a"
+variable "availability_zone" {
+  type    = string
+  default = "ap-south-1a"
 }
 
-variable "subnet"{
-    type = string
-    default = "subnet-037209f856165f414"
+variable "subnet" {
+  type    = string
+  default = "subnet-037209f856165f414"
 }
