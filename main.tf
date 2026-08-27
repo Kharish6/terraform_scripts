@@ -3,6 +3,13 @@ provider "aws" {
   region = var.aws_region
 }
 
+terraform {
+  backend "s3" {
+    bucket = "tfstate-983401047700-ap-south-1-an"
+    key    = "dev.tfstate"
+    region = var.aws_region
+  }
+}
 
 resource "aws_instance" "linuxAMI" {
   ami           = var.ami_id
